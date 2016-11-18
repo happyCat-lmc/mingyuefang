@@ -1,0 +1,162 @@
+<div id="joinwrap">
+<!--  header -->
+   <section class="join-header">
+        <div class="col-md-12 text-center">
+            <p class="join-header-img ">
+                <img class="img-responsive" src="../source/img/join/header-1.png" alt="hreader-1">
+            </p>
+            <p class="animated fadeInLeft  join-header-title-1">全国代理 火爆加盟</p>
+            <p class="animated fadeInRight join-header-title-2">明月坊建站平台重磅招商，与您携手共进。</p>
+            <p class="animated fadeInRight join-header-title-3">优质品牌/超值的政策/一流的产品/完备的服务/全面的扶持</p>
+           <p class="animated bounceIn join-header-title-4 col-md-8 col-md-offset-2">
+               <img src="../source/img/join/header-2.png" alt="">
+               <span>400 012 0351</span>
+           </p>
+        </div>
+   </section>
+
+
+<!--为什么选择-->
+    <section class="join-body">
+        <div class="container">
+            <div class="row">
+                <div class="join-body-title col-md-12">
+                    <h2>为什么选择明月坊建站平台</h2>
+                    <img class="img-responsive" src="../source/img/join/why.png" alt="why.png">
+                </div>
+                <ul class="join-why list-unstyled">
+                    <li ng-repeat="x in bodylist" class="animated fadeInLeft col-md-2 col-sm-4 col-xs-12 join-body-list text-center" >
+                        <div class=" join-list-div selfback{{x.id}}"></div>
+                        <h3>{{x.title}}</h3>
+                        <p>{{x.detail}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<!--成为代理商的条件  -->
+
+    <section class="join-htc">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12  join-htc-title text-center">
+                    <h2><strong>成为代理商的条件</strong></h2>
+                    <img class="img-responsive" src="../source/img/join/how.png" alt="how.png">
+                </div>
+                <div class="join-htc-body">
+                        <div   ng-repeat="x in companeinfo" class="animated rollIn visible-lg hidden-md hidden-sm hidden-xs col-lg-3  join-htc-xsdiv join-htc-div  join-htc-div{{x.id}} ">
+                            <p class="animated fadeInRight">{{x.summery}}</p>
+                        </div>
+                    <!-- md sm -->
+                        <div  class="animated slideInUp visible-md visible-sm join-htc-selfb">
+                            <div class=" col-md-3 col-sm-6" ng-repeat="x in companeinfoms">
+                                <p class="p1">{{x.summery}}</p>
+                                <a ng-click="rote()" href="javascript:;" class="thumbnail">
+                                    <img class="img-responsive img-circle" src="{{x.img}}" alt="{{x.alt}}">
+                                </a>
+                            </div>
+                        </div><!-- md sm -->
+
+                    <div  class="animated fadeInRight  col-xs-12 visible-xs join-htc-xs text-left">
+                        <p ng-repeat="x in companeinfoxs"><i class="{{x.icon}}"></i>{{x.summery}}</p>
+                    </div>
+                </div><!--lg -->
+            </div>
+        </div>
+    </section>
+
+
+    <!--给予代理商的支持 -->
+    <section class="join-support">
+        <div class="container">
+            <div class="row">
+                <div class="animated fadeIn col-md-12  join-support-title text-center">
+                    <h2><strong>明月HTML5平台给予代理商的支持</strong></h2>
+                </div>
+                <div class="animated fadeInLeft col-md-6 join-support-body1 text-center">
+                    <h2>销售支持</h2>
+                    <p>{{support.soldsup}}</p>
+                </div>
+                <div class="animated fadeInRight col-md-6 join-support-body2 text-center">
+                    <h2>技术支持</h2>
+                    <p>{{support.techsup}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 加盟流程 -->
+    <section class="join-rule">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12  join-rule-title text-center">
+                    <h2><strong>加盟流程</strong></h2>
+                    <img class="img-responsive" src="../source/img/join/join.png" alt="join.png">
+                </div>
+                <div class="col-md-6 hidden-sm hidden-xs  join-rule-bimg">
+                    <img ismap="ismap" usemap="#map" class="img-responsive img1" src="../source/img/join/rule.png" alt="rule">
+                    <!-- 点击img1不同的地方触发不同的事件 -->
+                    <map name="map"  id="map">
+                        <area coords="0,0,120,112"  ng-click="fun1()" >
+                        <area coords="90,175,202,291" ng-click="fun2()" >
+                        <area coords="173,332,285,448" ng-click="fun3()">
+                        <area coords="267,494,379,611" ng-click="fun4()" >
+                        <area coords="365,656,477,772" ng-click="fun5()" >
+                    </map>
+                </div>
+                <div class=" join-rule-bdetail  col-md-6 hidden-sm hidden-xs">
+                    <h2 class="rh"><i class="fa fa-hand-o-down"></i>详细流程<i class="fa fa-hand-o-down"></i></h2>
+                    <p class="r1"><strong>网上提交申请</strong></p>
+                    <p class="r2"><strong>双方沟通</strong></p>
+                    <p class="r3"><strong>提交商家资质</strong></p>
+                    <p class="r4"><strong>签订合作协议</strong></p>
+                    <p class="r5"><strong>成功加盟</strong></p>
+                </div>
+
+                <!-- sm xs  -->
+                <div class="visible-sm visible-xs join-rulexs">
+                    <p class="r1 col-sm-4 col-xs-5"><strong> <i class="fa fa-pencil"></i>提交申请</strong></p>
+                    <p class="r1 col-sm-4 col-xs-5"><strong> <i class="fa fa-pencil"></i>等待审核</strong></p>
+                    <p class="r2 col-sm-4 col-xs-5"><strong> <i class="fa fa-bar-chart"></i>双方沟通</strong></p>
+                    <p class="r3 col-sm-4 col-xs-5"><strong><i class="fa fa-reply"></i>提交资质</strong></p>
+                    <p class="r4 col-sm-4 col-xs-5"><strong><i class="fa fa-leaf"></i>签订协议</strong></p>
+                    <p class="r5 col-sm-4 col-xs-5"><strong><i class="fa fa-leaf"></i>成功加盟</strong></p>
+                </div><!-- xs sm  -->
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 代理商版图 -->
+    <section class="join-people">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12  join-people-title text-center">
+                    <h2><strong>代理商版图</strong></h2>
+                    <img class="img-responsive" src="../source/img/join/join.png" alt="join.png">
+                    <!--<div ng-bind-html="chinamap"></div>-->
+                    <div class="mapwrap">
+                        <img ismap="ismap" usemap="#usermap" class="img-responsive" src="../source/img/join/mm.png" alt="mm">
+                        <map name="usermap"  id="usermap">
+                            <area shape="rect" coords="143,252,266,307" ng-click="xinjiang()" >
+                            <area  coords="" ng-click="map2()" >
+                        </map>
+                        <div>
+                            <h4>尝试更多图示：</h4>
+                            <p>
+                                <a href="http://localhost:63342/mingyuefang/mingyuefang%20-v1.0/html/template/map.html" alt="_blank">图示1</a>
+                            </p>
+                            <p>
+                                <a href="http://localhost:63342/mingyuefang/mingyuefang%20-v1.0/html/template/mapline.html" alt="_blank">图示2</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div><!-- wrap -->

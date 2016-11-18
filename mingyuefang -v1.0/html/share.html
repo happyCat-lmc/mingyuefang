@@ -1,0 +1,61 @@
+<!-- -->
+<section class="share">
+    <div class="container">
+        <div class="row">
+            <!-- 侧边导航栏-->
+            <div class="animated  bounceIn col-md-3 hidden-sm hidden-xs share-sidebar">
+                <div class="list-group text-center">
+                    <a href="" ng-click="fedeve()" class="list-group-item item1 "><i class="fa fa-send"></i>前端开发</a>
+                    <a href="" ng-click="webdeve()" class="list-group-item item2"><i class="fa fa-globe"></i>网页设计</a>
+                    <a href="" ng-click="mobdeve()" class="list-group-item item3"><i class="fa fa-phone"></i>移动开发</a>
+                    <a href=""  ng-click="tools()" class="list-group-item item4"><i class="fa fa-thumbs-up"></i>实用工具</a>
+                    <a href=""  ng-click="lifecode()" class="list-group-item item5"><i class="fa fa-user"></i>程序人生</a>
+                    <a href="" ng-click="srou()"  class="list-group-item item6"><i class="fa fa-leaf"></i>素材资源</a>
+                    <!--<a href="" class="list-group-item"><i class="fa fa-eyedropper"></i>创意欣赏</a>-->
+                </div>
+            </div>
+            <!--主体内容 -->
+            <div class="col-md-9 col-sm-12 col-xs-12 share-contain">
+                <h4 class="col-md-12 share-contain-title"><strong>当前标签：精选</strong></h4>
+                <hr/>
+                <article class="animated fadeInRight col-md-12" ng-repeat="x in sharedata.infosummery track by $index">
+                    <header class="col-md-12">
+                        <h3><a ui-sref="tab.sharedetail({id:x.id,title:x.headcont,subtitle:x.subhe,contence:sharedata.infodetail[x.id].contence,rcount:sharedata.infoadd[x.id].recount,tcount:sharedata.infoadd[x.id].thumb,ccount:sharedata.infoadd[x.id].comcount})">{{x.headcont}}</a><span class="subheader">{{x.subhe}}</span></h3>
+                    </header>
+                    <div class="media">
+                        <div class="media-body col-md-8">
+                            <p>{{x.mediacont}}</p>
+                            <p class="art-btm">
+
+                                <span class="lab">{{sharedata.infoadd[x.id].lab}}</span>
+                            </p>
+                        </div>
+                        <div class="media-right col-md-4">
+                                <img class="media-object img-responsive img-rounded " src="{{x.imgsrc}}" alt="{{x.alt}}"/>
+                        </div>
+                    </div>
+                    <hr>
+                </article>
+            </div><!--主体内容 -->
+        </div>
+    </div>
+</section>
+
+
+<!-- 分页 -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 hidden-md hidden-lg">
+                <h4 class="subfooter">相关标签</h4>
+                <a ng-click="fedeve()"  class="col-sm-2 col-xs-2" href=""><i class="fa fa-send"></i>前端开发</a>
+                <a  ng-click="webdeve()" class="col-sm-2 col-xs-2" href=""><i class="fa fa-globe"></i>网页设计</a>
+                <a ng-click="mobdeve()" class="col-sm-2 col-xs-2" href=""><i class="fa fa-phone"></i>移动开发</a>
+                <a  ng-click="tools()" class="col-sm-2 col-xs-2" href=""><i class="fa fa-thumbs-up"></i>实用工具</a>
+                <a ng-click="lifecode()" class="col-sm-2 col-xs-2" href=""><i class="fa fa-user"></i>程序人生</a>
+                <a  ng-click="srou()" class="col-sm-2 col-xs-2" href=""><i class="fa fa-leaf"></i>素材资源</a>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,198 @@
+
+<nav class="navbar navbar-default  navbar-fixed-top " role="navigation">
+    <div class="container">
+        <div class="row ">
+            <div class="navbar-header col-sm-2">
+                <font color="#F151A6" size="5">明</font><font color="#4C6367" size="1">月</font><font color="#773D90" size="6">坊</font>
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- collapse  navbar-collapse 给导航栏添加响应式特性 -->
+            <div class="collapse navbar-collapse  col-sm-offset-2  col-md-8  col-md-offset-0" id="example-navbar-collapse">
+                <!-- 导航元素-->
+                <ul class="nav navbar-nav ">
+                    <li ng-click="myhome()" class=""><a ui-sref="tab.home">首页</a></li>
+                    <li ng-click="myfea()"  class="dropdown"><a ui-sref="tab.about" class="dropdown-toggle" data-toggle="dropdown">关于我们<span class="caret"></span></a>
+                        <ul class="dropdown-menu"  role="menu" aria-labelledby="dropdownMenu1" >
+                            <li ng-click="ourteam()"><a href="">团队风采</a></li>
+                            <li ng-click="ourfeature()"><a href="">企业文化</a></li>
+                        </ul>
+                    </li>
+                    <li ng-click="mychoose()" ><a ui-sref="tab.chooseUs">选择我们</a></li>
+                    <li ng-click="mynews()" ><a ui-sref="tab.news">新闻中心</a></li>
+                    <li ng-click="mysold()"><a ui-sref="tab.join">招商加盟</a></li>
+                    <li ng-click="myteach()" ><a ui-sref="tab.share">技术干货</a></li>
+                    <li ng-click="myconta()"><a ui-sref="tab.contact">联系我们</a></li>
+                </ul>
+            </div>
+            <!-- 用户状态-->
+            <div class="log-state hidden-sm  hidden-xs  col-md-2">
+                <p id="loginstate">当前状态:游客</p>
+            </div>
+        </div><!-- row-->
+    </div>
+</nav>
+
+<div ui-view=""></div>
+
+
+<!--login  window-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">欢迎登录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="uswrap">
+                    <div class="input-group my_user">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login_user" required type="text" class="form-control" placeholder="请输入用户名"/>
+                    </div>
+                    <p id="uswraning"></p>
+                </div>
+                <div class="pswrap">
+                    <div class="input-group my_user ">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="login_psd" required  type="password" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <p id="pswraning"></p>
+                </div>
+
+                    <div class="my_info">
+                        <span>
+                            <input type="checkbox" checked>
+                            <span>下次自动登录</span>
+                        </span>
+                        <span><a href="##">登录遇到问题</a>|<a href="" data-toggle="modal" data-target="#regModal" >立即注册</a></span>
+                            <!---->
+                    </div>
+
+                    <div class="my_loginbtn">
+                        <input id="login" type="button" class="btn btn-block  btn-primary " value="登录">
+                    </div>
+                    <div class="my_footer">
+                        <p>可以使用以下方式登录</p>
+                        <img src="../source/img/qq.png" width="40" height="40" alt="">
+                        <img src="../source/img/weixin.png" width="40" height="40" alt="">
+                        <p id="logininfo"></p>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button ng-click="closemodel()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- reg-->
+<div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">欢迎注册</h4>
+            </div>
+            <div class="modal-body">
+                    <div class="userwrap">
+                        <div class="input-group my_user">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" id="reg_user" required maxlength="6" class="form-control" placeholder="用户名4-6位字母和数字"/>
+                        </div>
+                        <span id="userinfo"></span>
+                    </div>
+
+                    <div class="phonewrap">
+                        <div class="input-group my_user">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                            <input type="tel" id="phone" required  maxlength="11" class="form-control" placeholder="请输入手机号码"/>
+                        </div>
+                        <span id="phoneinfo"></span>
+                    </div>
+
+                    <div class="psdwrap">
+                        <div class="input-group my_user ">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input type="text" id="reg_psd"  maxlength="12" required class="form-control" placeholder="输入6-12位密码，字母数字">
+                        </div>
+                        <span id="psdinfo"></span>
+                    </div>
+
+                    <div class="ispsdwrap">
+                        <div class="input-group my_user ">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input type="text" id="ispsd" maxlength="12" required class="form-control" placeholder="请确认密码">
+                        </div>
+                        <span id="ispsdinfo"></span>
+                    </div>
+
+
+                    <div class="my_loginbtn">
+                        <input type="button" id="reg" class="btn btn-block  btn-primary " value="注册">
+                    </div>
+                    <div class="my_footer">
+                    <p id="regsucces"></p>
+                     </div>
+            </div>
+            <div class="modal-footer">
+                <button ng-click="closemodel()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 工具箱 -->
+<div class="tabtools">
+    <div class="tabreg" data-toggle="modal" data-target="#regModal"></div>
+    <div class="tablogin" data-toggle="modal" data-target="#loginModal"></div>
+    <div class="gotop"></div>
+</div>
+
+
+
+
+
+<footer class="my-footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 my-about">
+                <h4>关于我们</h4>
+                <p>{{innerp.p}}</p>
+            </div>
+            <div class="col-md-4 my-contact text-center">
+                <h4>联系我们</h4>
+                <ul style="text-align:center;">
+                    <li   class="list-unstyled" ng-repeat="x in footerInfo">
+                        <p style="margin-bottom: 15px; "><i class="{{x.icon}}"></i>{{x.inner}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 my-focus">
+                <h4>关注我们</h4>
+                <div>
+                    <img src="../source/img/weixin.jpg" alt="weixin">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row my-reg">
+        <!--<p class="col-md-5 col-md-offset-1 pull-left"><strong>明月坊</strong>@Copyright 2016. MingYueFang All Rights Reserved. </p>-->
+        <ul class="col-md-8 col-md-offset-2 list-inline ">
+
+            <li><a href="">@Copyright 2016. MingYueFang All Rights Reserved.</a></li>
+            <li style="margin-left: 20px"><a href="">帮助中心  |</a></li>
+            <li><a href="">联系我们</a></li>
+        </ul>
+    </div>
+</footer>

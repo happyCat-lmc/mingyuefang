@@ -1,0 +1,85 @@
+
+<!--联系我们 header-->
+<section class="contactHeader" id="sold">
+    <div class="row">
+        <div class="page-header col-md-12">
+            <ul class="list-inline">
+                <li><a ui-sref="tab.home" class=" active">首页 /</a></li>
+                <li>联系我们</li>
+            </ul>
+            <h1>联系我们</h1>
+            <div class="under"></div>
+        </div>
+    </div>
+</section>
+
+<!-- body-->
+<section class="contact-body">
+    <div class="container">
+        <div class="row">
+            <div class="animated fadeInLeft col-md-6 contact-body-left">
+                <h2><strong>联系我们</strong></h2>
+                <div class="input-group  ">
+                    <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user"></i></span>
+                    <input id="cname" type="text" class="form-control" placeholder="姓名" aria-describedby="sizing-addon1"/>
+                </div>
+                <div class="input-group ">
+                    <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-phone"></i></span>
+                    <input  id="ctel" type="tel" class="form-control" placeholder="联系方式" aria-describedby="sizing-addon1"/>
+                </div>
+
+                <div class="input-group ">
+                    <span class="input-group-addon" id="sizing-addon3"><i class="fa fa-envelope"></i></span>
+                    <input id="cemail" type="email" class="form-control" placeholder="电子邮箱" aria-describedby="sizing-addon1"/>
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">@ <span class="caret"></span></button>
+                        <ul id="choosemail" class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li ng-click="checkemail1()">@163.com</li>
+                            <li ng-click="checkemail2()">@126.com</li>
+                            <li ng-click="checkemail3()">@qq.com</li>
+                            <li ng-click="checkemail4()">@sina.com.cn</li>
+                            <li ng-click="checkemail5()">@sohu.com</li>
+                        </ul>
+                    </div>
+                </div><!-- email-->
+                <textarea id="ccontent"  maxlength="1000" rows="10" placeholder="登陆后，请输入您的需求"></textarea>
+               <button class="btn btn-lg btn-primary btnsure" ng-click="sure()">确认</button>
+            </div><!-- wrap -->
+            <div class="animated fadeInRight col-md-6 contact-body-right">
+                <h4 class="text-primary">联系我们</h4>
+                <p>HTML5时代以来。明月坊建站平台是国内首家HTML5网站建设及应用服务商， 提供基于HTML5技术为基础的网站建设开发、游戏网站开发、网站优化推广、品牌营销为一体的大数据营销方案。 并与国内百度、360、soso、搜狗、腾讯、31会议等一线互联网公司建立长期合作关系。</p>
+                <hr/>
+                <h4 class="text-primary">办公地址</h4>
+                <ul class="list-unstyled">
+                    <li ng-repeat="x in addr">
+                        <i class="{{x.icon}}"></i>
+                        <strong>{{x.info}}</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <!-- 地图 -->
+    <!--<div id="container" class="animated bounceIn"></div>-->
+    <div id="container" class="animated bounceIn"></div>
+
+    <!--subfooter -->
+    <div class="contact-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="col-md-8">明月H5建站平台是一个你需要的<strong>网站</strong></h3>
+                    <!--<button ng-click="mysold()" class="col-md-3 btn btn-primary btn-lg">现在购买</button>-->
+                    <button ng-click="a()" class="col-md-3 btn btn-primary btn-lg">现在购买</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

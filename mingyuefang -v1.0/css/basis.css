@@ -1,0 +1,260 @@
+
+
+
+/*超小设备（手机，小于 768px）*/
+
+@media (max-width: 768px) {
+    /*优化模板*/
+    .my-contence-two .my-col-first  h4{
+        text-align: left;
+    }
+    .my-contence-two .my-col-first  i{
+        margin-right: 30px;
+        margin-left: 0px;
+    }
+    .my-contence-two .my-col-first  p{
+        text-align: left;
+    }
+    /* 开创你的网站 */
+    .my-contence-six li{
+        margin-top: 10px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    /**/
+    .my-contence-six-detail .my-info1 i{
+        margin-right:15px;
+        display: inline;
+    }
+
+    /**/
+    .my-key li{
+        text-align: center;
+    }
+    .my-key i{
+        display: none;
+    }
+
+
+
+
+}
+/*!* 小型设备（平板电脑，768px 起*!*/
+@media (min-width: 768px) and (max-width:992px) {
+    /*优化模板*/
+    .my-contence-two .my-col-first  h4{
+        text-align: left;
+    }
+    .my-contence-two .my-col-first  i{
+        margin-right: 30px;
+        margin-left: 0px;
+    }
+    .my-contence-two .my-col-first  p{
+        text-align: left;
+    }
+    /* 开创你的网站 */
+    .my-contence-six li{
+        margin-top: 10px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    .my-contence-six-detail .my-info1 i{
+        margin-right:15px;
+        display: inline;
+    }
+
+}
+
+
+/*!*中型设备（台式电脑，992px 起） *!*/
+@media (min-width: 992px) and (max-width: 1200px) {
+    /* 开创你的网站 */
+    .my-contence-six li{
+        margin-top: 135px;
+        padding-bottom: 50px;
+        text-align: center;
+        /*border:1px solid red;*/
+    }
+
+    .my-contence-six ul  li:nth-of-type(4){
+        margin-top: 40px;
+        margin-left: 40px;
+        padding-bottom: 50px;
+    }
+
+    .my-contence-six-detail .my-info .my-info1{
+        text-align: right;
+    }
+    .my-contence-six-detail .my-info1 i{
+        margin-left:15px;
+        display: inline-block;
+    }
+
+
+}
+/*大型设备（大台式电脑，1200px 起） */
+@media (min-width: 1200px) {
+    /* 开创你的网站 */
+    .my-contence-six li{
+        margin-top: 135px;
+        padding-bottom: 50px;
+        text-align: center;
+        /*border:1px solid red;*/
+    }
+
+    .my-contence-six ul  li:nth-of-type(4){
+        margin-top: 40px;
+        margin-left: 40px;
+        padding-bottom: 50px;
+    }
+
+    .my-contence-six-detail .my-info .my-info1{
+        text-align: right;
+    }
+    .my-contence-six-detail .my-info1 i{
+        margin-left:15px;
+        display: inline-block;
+    }
+}
+
+
+/* 初识化标签 */
+p,h1,h2,h3,h4,h5,h6,a,i,strong,span,ol,ul,li,form,input,label,textarea{
+    margin:0;
+    padding: 0;
+}
+
+
+/* a标签设置 */
+a:link{
+    color:black;
+    text-decoration: none;
+}
+a:visited{
+    color:grey;
+    text-decoration: none;
+}
+a:hover{
+    color:black;
+    text-decoration: none;
+}
+a:active{
+    color:black;
+    text-decoration: none;
+}
+
+/* 全局样式设置 */
+body{
+    padding-top: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*model-diver-case*基础样式   */
+.my-contence-three{
+    /*height: 250px;*/
+    padding: 0px 25px;
+    background-color: rgb(0,136,204);
+}
+
+.my-contence-three .my-con-one{
+    padding-top:35px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.my-contence-three .my-con-one h2{
+    margin-top: 25px;
+    font-size: 30.8px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+.my-contence-three .my-con-one p{
+    margin-bottom: 25px;
+    font-size: 16.8px;
+    font-weight: 300;
+}
+
+.my-contence-three .my-xs-hidden-bnt{
+    margin-top: 53px;
+    border-radius: 5px;
+}
+.my-contence-three .my-xs-show-bnt{
+    margin-top: 23px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+/*footer  */
+.my-footer{
+    background-color: #000000;
+    color:white;
+    padding: 10px 0px;
+    text-align: center;
+
+}
+.my-footer strong{
+    margin-right: 30px;
+    font-size: 24px;
+}
+.my-footer h4{
+    font-size: 22.68px;
+    line-height: 27px;
+    font-weight: 200;
+    margin-top:50px;
+    margin-bottom: 15px;
+}
+.my-footer .my-about{
+    /*border:1px solid red;*/
+    padding-left:90px;
+    padding-right:40px;
+    margin-bottom: 35px;
+}
+.my-footer .my-about p{
+    font-size: 12.6px;
+    line-height: 22px;
+    text-align: left;
+    text-indent: 1cm;
+}
+
+.my-footer .my-contact{
+    /*border:1px solid red;*/
+    padding-left:90px;
+    padding-right:40px;
+    margin-bottom: 35px;
+
+}
+.my-footer .my-contact li{
+    text-align: left;
+
+
+}
+.my-footer .my-contact i{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+
+}
+.my-footer .my-focus{
+    /*border:1px solid red;*/
+    margin-bottom: 35px;
+}
+
+.my-footer .my-reg a:link{
+    color:white;
+    text-decoration: none;
+}
+.my-footer .my-reg a:visited{
+    color:grey;
+    text-decoration: none;
+}
+.my-footer .my-reg a:hover{
+    color:white;
+    text-decoration: none;
+}
+.my-footer .my-reg a:active{
+    color:white;
+    text-decoration: none;
+}

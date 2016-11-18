@@ -1,0 +1,168 @@
+
+<!--关于我们 -->
+<section class="aboutHeader">
+    <!--<div class="container">-->
+        <div class="row">
+            <div class="page-header col-md-12">
+                <ul class="list-inline">
+                    <li><a ui-sref="tab.home" class="">首页 /</a></li>
+                    <li>关于我们</li>
+                </ul>
+                <h1>关于我们</h1>
+                <div class="under"></div>
+            </div>
+        </div>
+    <!--</div>-->
+</section>
+
+<!-- 新的方式 -->
+<section class="about-summer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 center-block">
+                <h2>新的方式<strong> 成功。</strong></h2>
+                <p class="lead">HTML5时代以来。明月坊建站平台是国内首家HTML5网站建设及应用服务商，提供基于HTML5技术为基础的网站建设开发、游戏网站开发、网站优化推广、品牌营销为一体的大数据营销方案。并与国内百度、360、soso、搜狗、腾讯、31会议等一线互联网公司建立长期合作关系。</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 基于自助建站系统  -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="animated bounceIn  about-selfwrp col-md-4 " ng-repeat="x in titleInner">
+                <div ng-cloak="" class="{{x.iconWrap}}"><i ng-cloak="" class="{{x.iconDtail}}"></i></div>
+                <div ng-cloak="" class="{{x.info}}">
+                    <h4 ng-cloak="" >{{x.infoTitle}}</h4>
+                    <p ng-cloak="" >{{x.infoBody}}</p>
+                </div>
+                <div ng-cloak="" class="{{x.iconWrap2}}"><i ng-cloak="" class="{{x.iconDtail2}}"></i></div>
+                <div ng-cloak="" class="{{x.info2}}">
+                    <h4 ng-cloak="">{{x.infoTitle2}}</h4>
+                    <p ng-cloak="">{{x.infoBody2}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-devier-1">
+    <div class="row">
+        <div class="container">
+            <div ng-repeat="x in aboutDevider" class="about-sl col-md-3 col-sm-6 center-block">
+                <strong  ng-cloak="" class="{{x.eleNameStr}}">{{x.eleStr}}</strong>
+                <label ng-cloak=""  class="{{x.eleNameLabel}}">{{x.eleLabel}}</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 团队成员-->
+<section id="team"  >
+    <div class="container  about-team-pres">
+        <div class="row">
+            <div class="col-md-5 about-team">
+                <h2>团队风采</h2>
+                <p>明月坊建站平台以独特的经营理念，热忱的服务态度，良好的信誉口碑，得到广大客户的好评，相信通过我们的共同努力，明月H5建站平台的明天会更好，期待您的加盟！</p>
+            </div>
+            <div class="col-md-7">
+                <div class="about-pros" ng-repeat="x in progressbar" >
+                    <label>{{x.label}}</label>
+                    <div class="progress">
+                        <div class="progress-bar {{x.barColor}} progress-bar-striped active" role="progressbar" aria-valuenow="{{x.value}}" aria-valuemin="0" aria-valuemax="100" style="width:{{x.value}}%" data-toggle="popover" data-content="{{x.value}}%" data-placement="{{x.placement}}"  ></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--团队成员图片-->
+    <div class="container">
+        <div class="row">
+            <div class="animated fadeIn  col-sm-6 col-md-3" ng-repeat="x in partner">
+                <div class="thumbnail  about-thumbnail">
+                    <div class="imgwrap" style="background-image: url({{x.src}})">
+                    </div>
+
+                    <div class="caption">
+                        <strong>{{x.detail}}</strong>
+                    </div>
+                    <h5 class="about-name  ">{{x.name}}</h5>
+                    <h5 class="label-important">{{x.wise}}</h5>
+                </div>
+            </div>
+        </div>
+    </div><!--container-->
+</section>
+
+
+<!-- banner-->
+<section class="about-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 about-summery">
+                <blockquote class="about-bq" ng-cloak="">
+                    {{info}}
+                </blockquote>
+                <strong class="about-title">中国企业网</strong>
+                <div class="about-controll">
+                    <i class=" fa fa-dot-circle-o  about-one" ng-click="aboutControlCheck1()"></i>
+                    <i class="fa fa-dot-circle-o  about-two" ng-click="aboutControlCheck2()"></i>
+                </div>
+            </div>
+            <div class="col-md-6 about-video">
+                <video src="../source/video1.mp4" height="280"  loop="loop" muted="muted"  autoplay="autoplay">
+                您的浏览器暂不支持video标签。播放视频
+                </video>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 企业文化理念 -->
+<section id="feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="about-feature-title">企业文化理念</h2>
+                <ul class="about-feature-list">
+                    <li ng-repeat="x in feature">
+                        <p>{{x.title}}</p>
+                        <p>{{x.detail}}</p>
+                    </li>
+                </ul>
+            </div>
+<!-- 工作空间-->
+            <h2 class="about-work">工作空间</h2>
+            <div class="col-md-4 thumbnail about-workthumbnail">
+                <img class="img-responsive" src="../source/img/our-office-1.jpg" alt="office1">
+               <a href="../source/img/our-office-1.jpg"><i class="fa fa-search-plus"></i></a>
+            </div>
+            <div class="col-md-4 thumbnail about-workthumbnail">
+                <img class="img-responsive" src="../source/img/our-office-2.jpg" alt="office2">
+                <a href="../source/img/our-office-2.jpg"><i class="fa fa-search-plus"></i></a>
+            </div>
+            <div class="col-md-4 thumbnail about-workthumbnail">
+                <img class=" img-responsive " src="../source/img/our-office-3.jpg" alt="office3">
+                <a href="../source/img/our-office-1.jpg"><i class="fa fa-search-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- subfooter-->
+<section class="about-foote-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 about-footer">
+                <h3>您需要一个<strong>绚丽便捷</strong>的网站吗？还在等什么呢？</h3>
+            </div>
+        </div>
+    </div>
+
+</section>
+

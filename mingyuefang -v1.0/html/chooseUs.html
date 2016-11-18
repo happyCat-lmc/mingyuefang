@@ -1,0 +1,136 @@
+<!--  choose header-->
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <img class="img-responsive" src="../source/img/choose/landing-page-slide-1.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 choose-header">
+                <h2>明月坊建站平台最<strong>流行</strong>HTML网站模板</h2>
+                <p>超过18000的用户满意</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="choose-headerpic">
+        <div class="container">
+            <div class="row">
+                <img class="choose-yun img-responsive" src="../source/img/choose/sun.png" alt="">
+                    <ul class="list-inline center-block">
+                        <li ng-repeat="x in myicon" class="col-xs-12 {{x.self}}" >
+                            <div class="center-block">{{x.div}}</div>
+                            <strong class="text-primary">{{x.strong}}</strong>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</section>
+
+
+<!-- 我们的特点 -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="animated fadeIn col-md-8 choose-character">
+                <h2>我们的<strong>特点</strong></h2>
+                <div class="col-md-6 choose-character-left">
+                    <ul class="list-unstyled" ng-repeat="x in choosechatecter1">
+                        <li>
+                            <div class="choose-iconwrap"><i class="{{x.icon}}"></i></div>
+                            <div>
+                                <h4 class="text-primary">{{x.title}}</h4>
+                                <p class="">{{x.detail}}</p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 choose-character-right">
+                    <ul class="list-unstyled" ng-repeat="x in choosechatecter2">
+                        <li>
+                            <div class="choose-iconwrap"><i class="{{x.icon}}"></i></div>
+                            <div>
+                                <h4 class="text-primary">{{x.title}}</h4>
+                                <p class="">{{x.detail}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="animated fadeIn col-md-4 col-sm-12  choose-collapse">
+                <h2>更多...</h2>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title ">
+                                <a class="" data-toggle="collapse" data-parent="#accordion" href="/#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa fa-usd"></i>SEO优化
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                可设置网站SEO参数及所有页面SEO信息，如关键词、页面描述等
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="/#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fa fa-comment"></i>互动营销
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                在线留言后台管理功能及邮件发送功能，管理员可以通过后台审核和回复留言内容
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="/#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                   <i class="fa fa-laptop"></i>安全与效率
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                内置数据库备份和恢复功能，可一键轻松完成整站数据库备份与恢复；
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 客户案例 -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 choose-user">
+                <h2>客户案例<strong>可信</strong>关于明月坊建站平台</h2>
+                <p class="text-primary">应有尽有的模板，满足我们的客户。</p>
+            </div>
+            <div>
+                <img ng-repeat="x in imgs" class="img-responsive col-md-3 col-sm-6 col-xs-6" src="{{x}}" alt="band">
+            </div>
+
+            <img  class="img-responsive text-center" src="../source/img/choose/choose-1.png" alt="">
+        </div>
+    </div>
+</section>

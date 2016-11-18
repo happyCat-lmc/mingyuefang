@@ -1,0 +1,274 @@
+<div class="home-wrap">
+    <!-- 轮播-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li ng-repeat="x in  carouselIndex" data-target="#carousel-example-generic" data-slide-to="{{x.index}}" class="{{x.state}}"></li>
+
+        </ol>
+        <!-- Wrapper for slides -->
+        <!-- .carousel"、".carousel-inner"、".item"  -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item {{x.state}}" ng-repeat="x in carouselData ">
+                <img class="img-responsive" src="{{x.src}}" alt="{{x.alt}}">
+            </div>
+        </div>
+
+
+        <a ng-repeat="x in carouselControl" class="{{x.direction}} carousel-control" href="#carousel-example-generic" role="button" data-slide="{{x.dataSlide}}">
+            <span class="glyphicon glyphicon-chevron-{{x.direction}}"></span>
+            <span class="sr-only">{{x.innerSpan}}</span>
+        </a>
+    </div>
+    <!-- 标题 -->
+
+    <div class="home-bannertitle col-md-12 col-sm-12 col-xs-12 text-center">
+        <p class="animated fadeIn">明月坊建站平台</p>
+        <h3 class="animated fadeInLeft">多用途HTML5模板</h3>
+        <p class="animated fadeInRight">专注、专业、高效</p>
+    </div>
+</div>
+
+<!-- 明月坊建站平台  -->
+<div class="container">
+    <div class="col-md-12 text-center my-contence">
+        <h2>{{myfTitle.titleLeft}}
+            <strong class="font-liu">
+                <span class="pop  visible ">最流行</span>
+                <span class="fashion  hidden ">最时尚</span>
+                <span class="econ hidden ">最经济</span>
+            </strong>
+            {{myfTitle.titleRight}}
+        </h2>
+
+
+        <p class="lead" ng-bind="myfTitle.smallTitleFirst"></p>
+        <p class="lead" ng-bind="myfTitle.smallTitleSecond"></p>
+    </div>
+    <div class="row">
+        <ul class="list-inline my-list ">
+            <li ng-repeat="x in myfList" class="col-xs-12 col-sm-6 col-md-3 text-center">
+                <i class="{{x.icon}}"></i>
+                <strong>{{x.strong}}</strong>
+                <label>{{x.labelInner}}</label>
+                <p class="text-primary">{{x.innerp}}</p>
+            </li>
+        </ul>
+    </div>
+</div><!-- container -->
+
+<!--优化模板-->
+<div class="row my-contence-two">
+    <div class="container-fluid">
+        <div ng-repeat="x in myContenceTwoData" class="contencetwoleft  animated slideInLeft col-md-4  {{x.self}}">
+            <div class="col-sm-12 ">
+                <h4>{{x.innerh4Left}}<i class="{{x.icon}}"></i>{{x.innerh4}}</h4>
+                <p>{{x.innerp}}</p>
+            </div>
+            <div class="col-sm-12 ">
+                <h4>{{x.h4Left}}<i class="{{x.icon2}}"></i>{{x.h4Right}}</h4>
+                <p>{{x.p}}</p>
+            </div>
+        </div>
+
+        <div ng-repeat="x in myContenceTwoImg " class=" contencetwomid animated slideInDown col-sm-12 col-md-4 {{x.self}}">
+            <img class="img-responsive my-md-lg-img" src="{{x.src}}" alt="{{x.alt}}">
+        </div>
+        <div class="contencetworight col-md-4 my-col-second animated slideInRight">
+            <div class="col-sm-12 ">
+                <h4><i class="{{myContenceTwoRight.icon}}"></i>{{myContenceTwoRight.innerh4}}</h4>
+                <p>{{myContenceTwoRight.innerp}}</p>
+            </div>
+            <div class="col-sm-12 ">
+                <h4><i class="{{myContenceTwoRight.icon2}}"></i>{{myContenceTwoRight.h4}}</h4>
+                <p>{{myContenceTwoRight.p}}</p>
+            </div>
+        </div>
+    </div><!--container-fluid -->
+</div><!--  -->
+
+<!--模板分类-->
+<div ng-include="caseOne"></div>
+<!-- 分类列表-->
+<div class="my-contence-fourth">
+    <div class="container">
+        <div class="row">
+            <ul class="list-inline  center-block">
+                <li ng-click="changeElement()" ng-repeat="x in ContenceFourthList"  class="col-xs-12 {{x.self}}  col-md-2"><a href="javascript:;">{{x.inner}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 分类模板 -->
+<div class="container">
+    <div class="row">
+        <ul class="list-inline my-contence-five">
+            <li  ng-repeat="x in detailList" class="animated bounceIn col-xs-12 col-sm-6 col-md-3">
+                <div class="">
+                    <div class="my-backg">
+                        <a href="http://www.0c0.com.cn/look/frame.php?url=/demo/25/10348/index.html"><img  class="img-responsive" src="{{x.src}}" alt="{{x.alt}}"></a>
+                    </div>
+                    <div class="caption">
+                        <p>
+                            <a href="http://www.0c0.com.cn/look/frame.php?url=/demo/25/10348/index.html"><strong>{{x.caption}}</strong></a>
+                        </p>
+                        <p>
+                            <a href="http://www.0c0.com.cn/look/frame.php?url=/demo/25/10348/index.html">{{x.innerp}}</a>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 开创你的网站 -->
+<div ng-include="caseTwo"></div>
+<!-- 图表展示 -->
+<div class="my-contence-six">
+    <div class="container">
+        <ul class="list-inline center-block">
+            <div class="row ">
+                <li  ng-repeat="x in myicon" class="animated bounceIn  col-xs-12 {{x.self}}" >
+                    <div class="center-block">{{x.div}}</div>
+                    <strong>{{x.strong}}</strong>
+                    <p class="text-primary">{{x.p}}</p>
+                </li>
+            </div>
+        </ul>
+    </div><!-- container -->
+</div>
+
+<!-- 详细信息  -->
+<div class="my-contence-six-detail">
+    <div class="container">
+        <div class="row">
+            <div class="animated fadeInDown   col-md-12 center-block my-dev">
+                <h2>对移动设备进行了<strong>多种</strong><span class="text-primary">优化</span></h2>
+                <p>明月坊建站平台是完全响应式设计，可以在任何设备上浏览。</p>
+            </div>
+        </div>
+
+        <div class="row my-info">
+            <div class=" animated fadeInLeft  col-md-4 my-info1">
+                <h4 class="hidden-xs hidden-sm">100%响应<i class="fa fa-mobile text-primary"></i></h4>
+                <h4 class="visible-sm visible-xs"><i class="fa fa-mobile text-primary"></i>100%响应</h4>
+                <p>明月坊建站平台是完全响应并适应任何移动设备或平板电脑</p>
+            </div>
+            <div class=" animated fadeInDown  col-md-4 my-info2">
+                <img class="img-responsive" src="../source/img/responsive-ready.png" alt="">
+            </div>
+            <div class=" animated fadeInRight col-md-4 my-info3">
+                <h4><i class="fa fa-eye text-primary"></i>100%响应</h4>
+                <p>明月坊建站平台将永远在任何设备看上去很完美</p>
+            </div>
+        </div>
+    </div><!--container -->
+</div>
+
+<!-- 你下一步所需要的一切  -->
+<div ng-include="caseThree"></div>
+<div class="my-quality-updata">
+    <div class="container">
+        <div class="media animated fadeInLeft">
+            <div class="row my-quality">
+                <a class="media-left col-xs-12 col-md-4" href="#">
+                    <img class="img-responsive" src="../source/img/top-quality-documentation.png" alt="">
+                </a>
+                <div class="media-body  col-xs-12 col-md-8">
+                    <h2 class="media-heading">质量<strong>网站</strong></h2>
+                    <p>明月坊建站平台是一个非常广泛的和尽可能详尽彻底，文件中每一段的主题，其特点是以通俗易懂的方式描述，它还配备了大量的截图来帮助你。如果说明文档不够详细，请联系我们。</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- container -->
+    <div class="my-updata">
+        <div class="container ">
+            <div class="media animated fadeInRight">
+                <div class="row ">
+                    <a class="media-right col-xs-12 col-md-4 col-md-push-8" href="#">
+                        <img  class="img-responsive" src="../source/img/updates.png" alt="">
+                    </a>
+                    <div class="media-body  col-xs-12 col-md-8 col-md-pull-4">
+                        <h2 class="media-heading">模板<strong>更新</strong></h2>
+                        <p>明月坊建站平台模板不断被新的功能和所包含的插件更新包更新。
+                            如果你对下一个更新有任何建议，请告诉我们。</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- container  -->
+    </div>
+</div><!-- my-quality-updata  -->
+
+<!-- 关键 特征 -->
+<section class="">
+    <div class="container my-key">
+        <div class="row">
+            <div class="col-md-12 center-block my-keyInfo">
+                <h2>关键<strong>特征</strong></h2>
+                <p>有很多理由选择明月坊建站平台，这里有几项：</p>
+                <hr class="sr-only">
+            </div>
+        </div>
+        <div class="row">
+            <ul class="list-inline my-list-info col-sm-5 col-md-12">
+                <li ng-repeat="x in mykeyli1" class="col-xs-12 col-md-3">
+                    <h4><i class="fa fa-check-circle-o text-primary"></i><strong>{{x}}</strong></h4>
+                </li>
+            </ul>
+            <ul class="list-inline my-list-info col-sm-4 col-md-12">
+                <li ng-repeat="x in mykeyli2" class="col-xs-12 col-md-3">
+                    <h4><i class="fa fa-check-circle-o text-primary"></i><strong>{{x}}</strong></h4>
+                </li>
+            </ul>
+            <ul class="list-inline my-list-info   col-sm-3 col-md-12">
+                <li ng-repeat="x in mykeyli3" class="col-xs-12 col-md-3">
+                    <h4><i class="fa fa-check-circle-o text-primary"></i><strong>{{x}}</strong></h4>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <span class="text-primary">等等更多…</span>
+    </div><!-- container -->
+
+    <!--客户留言-->
+    <div class="my-userMassage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12  center-block my-title">
+                    <p><i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                    <h2><strong>客户留言</strong></h2>
+                </div>
+                <div class="col-md-8 col-md-offset-2  my-body">
+                    <p class="animated slideInLeft">{{uinfo}}<h4>{{pepl}}</h4>
+                    </p>
+                    <div class="my-dots">
+                        <i ng-click="dot1()" class="fa fa-dot-circle-o "></i>
+                        <i ng-click="dot2()" class="fa fa-dot-circle-o"></i>
+                        <i ng-click="dot3()" class="fa fa-dot-circle-o"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--container -->
+    </div>
+</section>
+
+<!-- subfooter  -->
+<section class="go">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>今天开始创建您的新网站网站</h2>
+                <p>现在，你已经知道你的最佳选择了吧？现在就开始吧。</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+

@@ -1,0 +1,92 @@
+
+<!--新闻 header-->
+<section class="newsHeader">
+    <div class="row">
+        <div class="page-header col-md-12">
+            <ul class="list-inline">
+                <li><a ui-sref="tab.home" class="">首页 /</a></li>
+                <li>新闻中心</li>
+            </ul>
+            <h1>新闻中心</h1>
+            <div class="underline"></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- news body-->
+<section class="news-body">
+    <div class="container">
+        <div class="row">
+            <div  class="news-body-detail col-md-9 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="animated fadeIn  col-xs-6 col-sm-6 col-md-4 item" ng-repeat="x in getdataArray">
+                        <div href="" class="thumbnail">
+                            <img class="img-responsive" src="{{x.imgsrc}}"/>
+                        </div>
+                        <div class="caption">
+                            <p>{{x.title}}</p>
+                            <a ui-sref='tab.newsdetail({id:x.docid||x.postid})'><button class="btn btn-sm btn-primary">新闻详情>></button></a>
+                        </div>
+                        <iframe class="sharetools" frameborder="0" src="http://localhost:63342/mingyuefang/mingyuefang%20-v1.0/lib/share/socialShare-master/index.html"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="news-body-list col-md-3 hidden-sm hidden-xs">
+                 <div class="tab">
+                    <h2><strong>分类中心</strong></h2>
+                     <ul class="list-title list-unstyled">
+                         <li  ng-click="fun1()"><h4><i class="fa fa-chevron-right"></i><a href="javascript:;">明月科技</a></h4></li>
+                         <li ng-click="fun2()"><h4><i class="fa fa-chevron-right"></i><a href="javascript:;">明月财经</a></h4></li>
+                         <li ng-click="fun3()"><h4><i class="fa fa-chevron-right"></i><a href="javascript:;">明月政务</a></h4></li>
+                         <li ng-click="fun4()"><h4><i class="fa fa-chevron-right"></i><a href="javascript:;">明月体育</a></h4></li>
+                         <li ng-click="fun5()"><h4><i class="fa fa-chevron-right"></i><a href="javascript:;">明月头条 </a></h4></li>
+                     </ul>
+                </div>
+                <div role="tabpanel" class="detail">
+                    <!-- Nav tabs -->
+                    <ul class=" nav nav-tabs" role="tablist" id="mytabs">
+                        <li role="presentation" ng-click="top()" class="active"><a href="/#hot" aria-controls="hot" role="tab" data-toggle="tab">热点新闻</a></li>
+                        <li role="presentation" ng-click="last()"><a href="/#last" aria-controls="profile" role="tab" data-toggle="tab">推荐新闻</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="hot">
+                            <ul class="">
+                                <li ng-repeat="dt in sublistdata"><a ui-sref='tab.newsdetail({id:dt.docid||dt.postid})'>{{dt .title}}</a></li>
+                            </ul>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="last">
+                            <ul class="">
+                                <li ng-repeat="dt in listdata"><a ui-sref='tab.newsdetail({id:dt.docid||dt.postid})'>{{dt .title}}</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- row-->
+    </div><!--container -->
+</section>
+
+<section class="news-page">
+    <div class="container">
+        <div class="row">
+            <!-- 分页-->
+            <nav class="col-md-12">
+                <ul class="pagination">
+                    <li class="disabled"><a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="" ng-click="page1(id,url)"><a href="">1<span class="sr-only">(current)</span></a></li>
+                    <li ng-click="page2(id,url)"><a href="">2<span class="sr-only">(current)</span></a></li>
+                    <li ng-click="page3(id,url)"><a href="">3<span class="sr-only">(current)</span></a></li>
+                    <li ng-click="page4(id,url)"><a href="">4<span class="sr-only">(current)</span></a></li>
+                    <li><a href="">...<span class="sr-only">(current)</span></a></li>
+                    <li ng-click="pageend(id,url)"><a href="">最后一页<span class="sr-only">(current)</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+

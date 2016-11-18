@@ -1,0 +1,26 @@
+
+
+一、基本介绍：
+该网站是自己利用工作之余时间写的，模仿了一些不错的企业网站，又添加了一些论坛的元素，前后花了20多天，纯粹个人爱好，巩固学习，不做商业使用。精力有限，有些地方做的不够细致，希望对大家有帮助。
+
+二、主要技术：
+1、Bootstrap前端框架，实现响应式布局
+2、AngularJs (ui.router, ui-sref ,服务，指令，依赖注入)
+3、nodejs搭建本地服务器，实现登录、注册、评论、购买信息等功能
+4、h5,css3新的标签和样式，容易引起兼容性问题
+5、jquery框架,ajax、XMLHttpRequest、$http 跨域
+6、第三方插件(css.animate)，高德地图API，echarts
+
+三、使用方法：
+1、运行设备必须安装Node.js,参考（Node.js官网）
+
+2、安装成功后，打开项目文件找到server文件，打开后，运行login-reg.js和route.js文件（node login-reg.js / node route.js ）
+
+3、按照 mingyuefang-v1.0/html/index.html打开，强烈推荐使用 ****** chrome *******
+
+四、需后续完善的功能：
+1、兼容低版本浏览器
+2、第三方登录
+3、优化
+
+

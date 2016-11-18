@@ -1,0 +1,57 @@
+
+
+<section class="share">
+    <div class="container">
+        <div class="row">
+            <!--主体内容 -->
+            <h4 class="detailtitle col-md-12 text-center"><strong>{{title}}</strong><span class="subheader small">{{subtitle}}</span></h4>
+
+            <hr>
+            <div ng-bind-html="art" class="col-md-8 col-md-offset-2"></div>
+        </div>
+    </div>
+</section>
+
+<!-- 评论点赞区-->
+
+
+<section class="comment">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3> 评论区</h3>
+                <hr>
+                <!--<div class="summery">-->
+                    <!--<span><a href="javascript:;"><i class="fa fa-eye"></i></a>{{readcounts}}</span>-->
+                    <!--<span><a href="javascript:;"><i class="fa fa-thumbs-up"></i></a>{{thumbcounts}}</span>-->
+                    <!--<span><a href="javascript:;"><i class="fa fa-comment"></i></a>{{commentcounts}}</span>-->
+                <!--</div>-->
+                <div class="list">
+                    <div class="media" ng-repeat="x in userinfos[id].info">
+                        <div class="media-left">
+                            <img  class="img-responsive media-object" src="{{x.imgsrc}}" alt="media">
+                        </div>
+                        <div class="media-body">
+                            <p class="media-heading">
+                                <span>{{x.name}}</span>
+                                <span>{{x.time}}</span>
+                            </p>
+                            <p class="con">{{x.contence}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="write">
+                    <!--<img src="../source/img/share/comment/user0.gif" alt="">-->
+                    <!--<input type="text">-->
+                    <textarea id="com_content" rows="5" placeholder="登录后就可以畅所欲言了..."></textarea>
+                    <div class="clearfloat"></div>
+                    <button ng-click="pubiccomment()" class="btn btn-primary btn-sm">发表评论</button>
+                    <button class="btn btn-primary btn-sm">取消</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
